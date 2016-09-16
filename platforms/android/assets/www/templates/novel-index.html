@@ -1,0 +1,21 @@
+<ion-view title="Nhân viên Bamboo">
+
+    <ion-header-bar class="bar bar-subheader item-input-inset">
+        <button class="button button-clear icon ion-ios7-close-empty btn-search-reset" ng-click="clearSearch()"></button>
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input id="searchKey" type="text" placeholder="Search" ng-model="searchKey">
+        </label>
+        <button class="button button-clear" ng-click="search()">Search</button>    
+    </ion-header-bar>
+
+    <ion-content padding="true" has-bouncing="true">
+        <ion-list>
+            <ion-item ng-repeat="novel in novels track by $index" href="#/novel/{{novel.id}}">
+                <h3>{{novel.firstName}} {{novel.lastName}}</h3>
+                <p>{{novel.title}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+</ion-view>

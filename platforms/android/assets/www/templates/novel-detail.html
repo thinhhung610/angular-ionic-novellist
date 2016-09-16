@@ -1,0 +1,18 @@
+<ion-view title="{{novel.firstName + ' ' + novel.lastName}}">
+  <ion-content padding="true">
+
+      <div class="details">
+          <h4>{{ novel.firstName }} {{ novel.lastName }}</h4>
+          <p>{{ novel.title }}<br/>
+          {{ novel.city }}</p>
+      </div>
+
+      <div class="list card">
+          <a class="item item-icon-left" href="#/novel/{{novel.managerId}}" ng-if="novel.managerId > 0"><i class="icon ion-ios7-person"></i>Quản lý<p>{{novel.managerName}}</p></a>
+          <a class="item item-icon-left" href="tel:{{novel.cellPhone}}"><i class="icon ion-ios7-telephone"></i>Gọi điện<p>{{novel.cellPhone}}</p></a>
+          <a class="item item-icon-left" href="sms:{{novel.cellPhone}}"><i class="icon ion-chatbox-working"></i>Gửi tin nhắn<p>{{novel.cellPhone}}</p></a>
+          <a class="item item-icon-left" href="mailto:{{novel.email}}"><i class="icon ion-ios7-email"></i>Gửi email<p>{{novel.email}}</p></a>
+      </div>
+
+  </ion-content>
+</ion-view>
